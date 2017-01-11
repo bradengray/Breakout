@@ -7,21 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F202EA001E0B69C100E6B32E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202E9FF1E0B69C100E6B32E /* SettingsTableViewController.swift */; };
+		F202EA041E0B6F1A00E6B32E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202EA031E0B6F1A00E6B32E /* Settings.swift */; };
+		F202EA061E1068AF00E6B32E /* Brick.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202EA051E1068AF00E6B32E /* Brick.swift */; };
+		F233A1B81E09FDB0008DC78E /* BallBreakoutBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = F233A1B71E09FDB0008DC78E /* BallBreakoutBehavior.swift */; };
+		F233A1BA1E09FF75008DC78E /* BrickBreakoutBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = F233A1B91E09FF75008DC78E /* BrickBreakoutBehavior.swift */; };
 		F253F4101DF3105000E6D5C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F253F40F1DF3105000E6D5C6 /* AppDelegate.swift */; };
-		F253F4121DF3105000E6D5C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F253F4111DF3105000E6D5C6 /* ViewController.swift */; };
 		F253F4151DF3105000E6D5C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F253F4131DF3105000E6D5C6 /* Main.storyboard */; };
 		F253F4171DF3105000E6D5C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F253F4161DF3105000E6D5C6 /* Assets.xcassets */; };
 		F253F41A1DF3105000E6D5C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F253F4181DF3105000E6D5C6 /* LaunchScreen.storyboard */; };
+		F253F4231DF3165B00E6D5C6 /* BreakoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F253F4221DF3165B00E6D5C6 /* BreakoutView.swift */; };
+		F253F4251DF316A800E6D5C6 /* BreakoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F253F4241DF316A800E6D5C6 /* BreakoutViewController.swift */; };
+		F253F4271DF3178500E6D5C6 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F253F4261DF3178500E6D5C6 /* UIKitExtensions.swift */; };
+		F253F4291DF39EC500E6D5C6 /* NamedBezierPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = F253F4281DF39EC500E6D5C6 /* NamedBezierPaths.swift */; };
+		F253F42B1DF3A13A00E6D5C6 /* BallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F253F42A1DF3A13A00E6D5C6 /* BallView.swift */; };
+		F2674E531DF4913C009B23D7 /* BreakoutBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2674E521DF4913C009B23D7 /* BreakoutBehavior.swift */; };
+		F2ABDFFA1E25CA0100F8FC4F /* BreakOutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ABDFF91E25CA0100F8FC4F /* BreakOutGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F202E9FF1E0B69C100E6B32E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		F202EA031E0B6F1A00E6B32E /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		F202EA051E1068AF00E6B32E /* Brick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brick.swift; sourceTree = "<group>"; };
+		F233A1B71E09FDB0008DC78E /* BallBreakoutBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallBreakoutBehavior.swift; sourceTree = "<group>"; };
+		F233A1B91E09FF75008DC78E /* BrickBreakoutBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickBreakoutBehavior.swift; sourceTree = "<group>"; };
 		F253F40C1DF3105000E6D5C6 /* BreakOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F253F40F1DF3105000E6D5C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F253F4111DF3105000E6D5C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F253F4141DF3105000E6D5C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F253F4161DF3105000E6D5C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F253F4191DF3105000E6D5C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F253F41B1DF3105000E6D5C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F253F4221DF3165B00E6D5C6 /* BreakoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakoutView.swift; sourceTree = "<group>"; };
+		F253F4241DF316A800E6D5C6 /* BreakoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakoutViewController.swift; sourceTree = "<group>"; };
+		F253F4261DF3178500E6D5C6 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		F253F4281DF39EC500E6D5C6 /* NamedBezierPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamedBezierPaths.swift; sourceTree = "<group>"; };
+		F253F42A1DF3A13A00E6D5C6 /* BallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallView.swift; sourceTree = "<group>"; };
+		F2674E521DF4913C009B23D7 /* BreakoutBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakoutBehavior.swift; sourceTree = "<group>"; };
+		F2ABDFF91E25CA0100F8FC4F /* BreakOutGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakOutGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +76,57 @@
 		F253F40E1DF3105000E6D5C6 /* BreakOut */ = {
 			isa = PBXGroup;
 			children = (
+				F2674E541DF49599009B23D7 /* Model */,
+				F2674E551DF495A3009B23D7 /* Views */,
+				F2674E561DF495A7009B23D7 /* Controller */,
+				F253F4211DF3107800E6D5C6 /* Supporting Files */,
+			);
+			path = BreakOut;
+			sourceTree = "<group>";
+		};
+		F253F4211DF3107800E6D5C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F253F4261DF3178500E6D5C6 /* UIKitExtensions.swift */,
 				F253F40F1DF3105000E6D5C6 /* AppDelegate.swift */,
-				F253F4111DF3105000E6D5C6 /* ViewController.swift */,
-				F253F4131DF3105000E6D5C6 /* Main.storyboard */,
 				F253F4161DF3105000E6D5C6 /* Assets.xcassets */,
 				F253F4181DF3105000E6D5C6 /* LaunchScreen.storyboard */,
 				F253F41B1DF3105000E6D5C6 /* Info.plist */,
 			);
-			path = BreakOut;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2674E541DF49599009B23D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2674E521DF4913C009B23D7 /* BreakoutBehavior.swift */,
+				F233A1B71E09FDB0008DC78E /* BallBreakoutBehavior.swift */,
+				F233A1B91E09FF75008DC78E /* BrickBreakoutBehavior.swift */,
+				F2ABDFF91E25CA0100F8FC4F /* BreakOutGame.swift */,
+				F202EA031E0B6F1A00E6B32E /* Settings.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F2674E551DF495A3009B23D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F253F4131DF3105000E6D5C6 /* Main.storyboard */,
+				F253F4221DF3165B00E6D5C6 /* BreakoutView.swift */,
+				F202EA051E1068AF00E6B32E /* Brick.swift */,
+				F253F4281DF39EC500E6D5C6 /* NamedBezierPaths.swift */,
+				F253F42A1DF3A13A00E6D5C6 /* BallView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F2674E561DF495A7009B23D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F253F4241DF316A800E6D5C6 /* BreakoutViewController.swift */,
+				F202E9FF1E0B69C100E6B32E /* SettingsTableViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +202,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F253F4121DF3105000E6D5C6 /* ViewController.swift in Sources */,
+				F2674E531DF4913C009B23D7 /* BreakoutBehavior.swift in Sources */,
+				F2ABDFFA1E25CA0100F8FC4F /* BreakOutGame.swift in Sources */,
+				F253F4251DF316A800E6D5C6 /* BreakoutViewController.swift in Sources */,
+				F233A1BA1E09FF75008DC78E /* BrickBreakoutBehavior.swift in Sources */,
 				F253F4101DF3105000E6D5C6 /* AppDelegate.swift in Sources */,
+				F253F4291DF39EC500E6D5C6 /* NamedBezierPaths.swift in Sources */,
+				F202EA061E1068AF00E6B32E /* Brick.swift in Sources */,
+				F202EA041E0B6F1A00E6B32E /* Settings.swift in Sources */,
+				F253F42B1DF3A13A00E6D5C6 /* BallView.swift in Sources */,
+				F202EA001E0B69C100E6B32E /* SettingsTableViewController.swift in Sources */,
+				F233A1B81E09FDB0008DC78E /* BallBreakoutBehavior.swift in Sources */,
+				F253F4271DF3178500E6D5C6 /* UIKitExtensions.swift in Sources */,
+				F253F4231DF3165B00E6D5C6 /* BreakoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -248,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -302,6 +378,7 @@
 				F253F4201DF3105000E6D5C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
