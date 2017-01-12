@@ -12,7 +12,7 @@ class SettingsTableViewController: UITableViewController {
     
     //MARK: - Properties 
     
-    @IBOutlet weak var paddleDelaySwitch: UISwitch!
+    @IBOutlet weak var specialBricksSwitch: UISwitch!
     @IBOutlet weak var ballSpeedSegmentControl: UISegmentedControl!
     @IBOutlet weak var bricksPerRowStepper: UIStepper!
     @IBOutlet weak var numberOfRowsStepper: UIStepper!
@@ -30,9 +30,9 @@ class SettingsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        switch Settings.shared.paddleDelay {
-            case .Delayed: paddleDelaySwitch.isOn = true
-            case .Responsive: paddleDelaySwitch.isOn = false
+        switch Settings.shared.specialBricks {
+            case .Yes: specialBricksSwitch.isOn = true
+            case .No: specialBricksSwitch.isOn = false
         }
         
         switch Settings.shared.ballSpeed {
@@ -67,8 +67,8 @@ class SettingsTableViewController: UITableViewController {
     
     //MARK: - Actions
     
-    @IBAction func paddleDelaySwitchTouched(_ sender: UISwitch) {
-        Settings.shared.paddleDelay = sender.isOn ? .Delayed : .Responsive
+    @IBAction func specialBricksSwitchTouched(_ sender: UISwitch) {
+        Settings.shared.specialBricks = sender.isOn ? .Yes : .No
     }
 
     @IBAction func ballSpeedSegmentValueChanged(_ sender: UISegmentedControl) {

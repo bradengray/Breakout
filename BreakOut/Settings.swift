@@ -20,13 +20,13 @@ struct Settings {
     
     var delegate: SettingsDelegate?
     
-    var paddleDelay: PaddleDelay {
+    var specialBricks: SpecialBricks {
         get {
-            let value = getDefault(key: Constants.PaddleDelayKey) as? NSNumber.IntegerLiteralType ?? 1
-            return PaddleDelay(rawValue: value) ?? .Responsive
+            let value = getDefault(key: Constants.SpecialBricksKey) as? NSNumber.IntegerLiteralType ?? 1
+            return SpecialBricks(rawValue: value) ?? .Yes
         }
         set {
-            setDefault(value: NSNumber.init(integerLiteral: newValue.rawValue) as AnyObject, key: Constants.PaddleDelayKey)
+            setDefault(value: NSNumber.init(integerLiteral: newValue.rawValue) as AnyObject, key: Constants.SpecialBricksKey)
         }
     }
     
@@ -72,9 +72,9 @@ struct Settings {
         }
     }
     
-    enum PaddleDelay: Int {
-        case Responsive
-        case Delayed
+    enum SpecialBricks: Int {
+        case No
+        case Yes
     }
     
     enum BallSpeed: Int {
@@ -107,7 +107,7 @@ struct Settings {
 
     private struct Constants {
         static let UserDefaultsKey = "User Defaults Key"
-        static let PaddleDelayKey = "Paddle Delay Key"
+        static let SpecialBricksKey = "Special Bricks Key"
         static let BallSpeedKey = "Ball Speed Key"
         static let NumberOfRowsKey = "Number Of Rows Key"
         static let BricksPerRowKey = "Bricks Per Row Key"

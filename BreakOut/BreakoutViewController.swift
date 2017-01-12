@@ -8,9 +8,11 @@
 
 import UIKit
 
-class BreakoutViewController: UIViewController, BreakoutViewDelegate, SettingsDelegate {
+class BreakoutViewController: UIViewController, BreakoutViewDelegate, SettingsDelegate, UIViewControllerTransitioningDelegate {
     
     //MARK: - Outlets
+    
+    @IBOutlet weak var pointsLabel: UILabel!
     
     @IBOutlet weak var gameView: BreakoutView! {
         didSet {
@@ -18,6 +20,7 @@ class BreakoutViewController: UIViewController, BreakoutViewDelegate, SettingsDe
             Settings.shared.delegate = self
             gameView.addGestureRecognizer(UIPanGestureRecognizer(target: gameView, action: #selector(BreakoutView.movePaddle(recognizer:))))
             gameView.addGestureRecognizer(UITapGestureRecognizer(target: gameView, action: #selector(BreakoutView.tap(recognizer:))))
+            gameView.realGravity = true
             updateUI()
         }
     }
@@ -26,32 +29,35 @@ class BreakoutViewController: UIViewController, BreakoutViewDelegate, SettingsDe
     
     private var gameStarted: Bool = false
     private lazy var game: BreakoutGame = {
-       return BreakoutGame(points: 0, lives: 3)
+       return BreakoutGame(points: Game.startingPoints, lives: Game.numberOfLives)
     }()
     
     //MARK: - View Controller Life Cycle
     
-    override func viewDidLayoutSubviews() {
-        gameView.updateUI()
-    }
+//    override func viewDidLayoutSubviews() {
+//        gameView.updateUI()
+//        gameView.animating = false
+//    }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         gameView.animating = false
+        gameView.secondariesAnimating = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         gameView.animating = gameStarted
+        gameView.secondariesAnimating = true
     }
     
     //MARK: - UI
     
     private func updateUI() {
         if gameView != nil {
-            switch Settings.shared.paddleDelay {
-                case .Delayed: gameView!.paddleDelay = 0.2
-                case .Responsive: gameView!.paddleDelay = 0.0
+            switch Settings.shared.specialBricks {
+                case .Yes: gameView!.specialBricks = true
+                case .No: gameView!.specialBricks = false
             }
             
             switch Settings.shared.ballSpeed {
@@ -63,14 +69,15 @@ class BreakoutViewController: UIViewController, BreakoutViewDelegate, SettingsDe
             gameView.bricksPerRow = Settings.shared.bricksPerRow
             gameView.numberOfBrickRows = Settings.shared.numberOfRows
             gameView.brickColor = Settings.shared.brickColor.color
+            pointsLabel?.text = "\(game.points)"
         }
     }
-    
+
     //MARK: BreakoutViewDelegate
     
     func ballBelowPaddle() {
         gameView.animating = false
-        if game.lives < 1 {
+        if game.lives <= 1 {
             alertUserGameEnded()
         } else {
             gameView.updateUI()
@@ -83,11 +90,20 @@ class BreakoutViewController: UIViewController, BreakoutViewDelegate, SettingsDe
         gameStarted = true
     }
     
+    func removedBrick(brick: Brick) {
+        if brick.special {
+            game.points += Game.pointsForSpecialBrick
+        } else {
+            game.points += Game.pointsForBrick
+        }
+        updateUI()
+    }
+    
     //MARK: Alerts
     
     private struct Alert {
         static let gameOver = "Game Over"
-        static let gameOverMessage = "Sorry. Try Again."
+        static let gameOverMessage = "Try Again."
         static let doneAction = "Done"
     }
     
@@ -95,14 +111,44 @@ class BreakoutViewController: UIViewController, BreakoutViewDelegate, SettingsDe
         let alert = UIAlertController(title: Alert.gameOver, message: Alert.gameOverMessage, preferredStyle: .alert)
         let action = UIAlertAction(title: Alert.doneAction, style: .default) { (done) in
             self.gameView.resetView()
+            self.resetGame()
         }
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
+    }
+    
+    //MARK: - Game
+    
+    private struct Game {
+        static let numberOfLives = 3
+        static let pointsForBrick = 1
+        static let pointsForSpecialBrick = 15
+        static let startingPoints = 0
+    }
+    
+    private func resetGame() {
+        self.game.lives = Game.numberOfLives
+        self.game.points = Game.startingPoints
+        updateUI()
     }
     
     //MARK: - SettingsDelegate
     
     func settingsChanged() {
         updateUI()
+    }
+    
+    //MARK: - UIViewControllerTransitioningDelegate
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        coordinator.animate(alongsideTransition: { (context) in
+            self.gameView.updateUI()
+            self.gameView.animating = false
+            self.gameView.rotationWithoutTransition = false
+        }) { (context) in
+            //nothing now
+        }
     }
 }

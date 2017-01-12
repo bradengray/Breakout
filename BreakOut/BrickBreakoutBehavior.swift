@@ -39,6 +39,10 @@ class BrickBreakoutBehavior: BreakoutBehavior {
         }
     }
     
+    func setGravity(direction: CGVector) {
+        gravity.gravityDirection = direction
+    }
+    
     //MARK: Initialization
     
     override init() {

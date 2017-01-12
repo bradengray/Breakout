@@ -9,7 +9,7 @@
 import UIKit
 
 protocol BreakoutBehaviourCollisionDelegate {
-    func collisionWithBoundary(identifier: String?)
+    func collisionBetween(item: UIDynamicItem, boundary identifier: String?)
 }
 
 class BreakoutBehavior: UIDynamicBehavior, UICollisionBehaviorDelegate {
@@ -62,7 +62,7 @@ class BreakoutBehavior: UIDynamicBehavior, UICollisionBehaviorDelegate {
     func collisionBehavior(_ behavior: UICollisionBehavior, endedContactFor item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying?) {
         if delegate != nil {
             let id = identifier as? String
-            delegate?.collisionWithBoundary(identifier: id)
+            delegate?.collisionBetween(item: item, boundary: id)
         }
     }
     

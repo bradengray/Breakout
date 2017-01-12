@@ -10,4 +10,6 @@ import UIKit
 
 class Brick: UIView {
     var strength = 1
+    var hitDate: Date?
+    var special = false
 }
