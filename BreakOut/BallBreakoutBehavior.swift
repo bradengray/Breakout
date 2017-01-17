@@ -30,13 +30,13 @@ class BallBreakoutBehavior: BreakoutBehavior {
             itemBehavior.removeItem(item)
         }
     }
-    
-    func push(item: UIDynamicItem) {
+        
+    func push(item: UIDynamicItem, direction: CGPoint) { //Pass in CGPoint(0,0) for random direction
         let push = UIPushBehavior(items: [item], mode: .instantaneous)
         let velocity = itemBehavior.linearVelocity(for: item)
         itemBehavior.addLinearVelocity(CGPoint(x: -velocity.x, y: -velocity.y), for: item)
-        if pushDirection != nil, pushDirection != CGPoint() {
-            push.pushDirection = CGVector(dx: pushDirection!.x, dy: pushDirection!.y)
+        if direction != CGPoint() {
+            push.pushDirection = CGVector(dx: direction.x, dy: direction.y)
         } else {
            push.angle = randomAngle
         }
@@ -46,11 +46,11 @@ class BallBreakoutBehavior: BreakoutBehavior {
             push.dynamicAnimator!.removeBehavior(push)
         }
         addChildBehavior(push)
-        pushDirection = nil
+//        pushDirection = nil
     }
     
-    func getDirectionFor(item: UIDynamicItem) {
-        pushDirection = itemBehavior.linearVelocity(for: item)
+    func getDirectionFor(item: UIDynamicItem) ->CGPoint {
+        return itemBehavior.linearVelocity(for: item)
     }
     
     //MARK: Initialization
@@ -69,7 +69,7 @@ class BallBreakoutBehavior: BreakoutBehavior {
     
     //MARK: Properties
     
-    private var pushDirection: CGPoint?
+//    private var pushDirection: CGPoint?
     
     private let itemBehavior: UIDynamicItemBehavior = {
         let itemBehavior = UIDynamicItemBehavior()

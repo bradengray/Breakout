@@ -48,6 +48,7 @@ class BreakoutViewController: UIViewController, BreakoutViewDelegate, SettingsDe
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         gameView.animating = gameStarted
+        if gameStarted { gameView.restartBall() }
         gameView.secondariesAnimating = true
     }
     
@@ -80,13 +81,14 @@ class BreakoutViewController: UIViewController, BreakoutViewDelegate, SettingsDe
         if game.lives <= 1 {
             alertUserGameEnded()
         } else {
-            gameView.updateUI()
+            gameView.updateSubviews()
             game.lives -= 1
         }
     }
     
     func viewTapped() {
         gameView.animating = true
+        gameView.restartBall()
         gameStarted = true
     }
     
@@ -97,6 +99,10 @@ class BreakoutViewController: UIViewController, BreakoutViewDelegate, SettingsDe
             game.points += Game.pointsForBrick
         }
         updateUI()
+    }
+    
+    func resetView() {
+        resetGame()
     }
     
     //MARK: Alerts
@@ -127,6 +133,7 @@ class BreakoutViewController: UIViewController, BreakoutViewDelegate, SettingsDe
     }
     
     private func resetGame() {
+        gameStarted = false
         self.game.lives = Game.numberOfLives
         self.game.points = Game.startingPoints
         updateUI()
@@ -144,11 +151,11 @@ class BreakoutViewController: UIViewController, BreakoutViewDelegate, SettingsDe
         super.viewWillTransition(to: size, with: coordinator)
         
         coordinator.animate(alongsideTransition: { (context) in
-            self.gameView.updateUI()
+            self.gameView.updateSubviews()
             self.gameView.animating = false
             self.gameView.rotationWithoutTransition = false
         }) { (context) in
-            //nothing now
+            self.gameStarted = false
         }
     }
 }

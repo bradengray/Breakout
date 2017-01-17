@@ -13,6 +13,7 @@ protocol BreakoutViewDelegate {
     func ballBelowPaddle()
     func viewTapped()
     func removedBrick(brick: Brick)
+    func resetView()
 }
 
 class BreakoutView: UIView, BreakoutBehaviourCollisionDelegate {
@@ -20,10 +21,10 @@ class BreakoutView: UIView, BreakoutBehaviourCollisionDelegate {
     //MARK: - Public
     
     var delegate: BreakoutViewDelegate?
-    var bricksPerRow = 10 { didSet { if oldValue != bricksPerRow { addBricks() } } }
-    var numberOfBrickRows = 5 { didSet { if oldValue != numberOfBrickRows { addBricks() } } }
+    var bricksPerRow = 10 { didSet { if oldValue != bricksPerRow { resetView() } } }
+    var numberOfBrickRows = 5 { didSet { if oldValue != numberOfBrickRows { resetView() } } }
     var brickSpacing = 5
-    var specialBricks = false { didSet { if oldValue != specialBricks { addBricks() } } }
+    var specialBricks = false { didSet { if oldValue != specialBricks { resetView() } } }
     var ballSpeed: CGFloat = 1.0 { didSet { ballBreakoutBehavior.ballSpeed = ballSpeed } }
     var brickColor: UIColor = .orange { didSet { changebrickColors() } }
     
@@ -31,12 +32,15 @@ class BreakoutView: UIView, BreakoutBehaviourCollisionDelegate {
         didSet {
             if animating {
                 primaryAnimator.addBehavior(ballBreakoutBehavior)
-                ballBreakoutBehavior.push(item: ball)
             } else {
-                ballBreakoutBehavior.getDirectionFor(item: ball)
+                ballDirection = ballBreakoutBehavior.getDirectionFor(item: ball)
                 primaryAnimator.removeBehavior(ballBreakoutBehavior)
             }
         }
+    }
+    
+    func restartBall() {
+        ballBreakoutBehavior.push(item: ball, direction: ballDirection)
     }
     
     var realGravity: Bool = false {
@@ -88,7 +92,7 @@ class BreakoutView: UIView, BreakoutBehaviourCollisionDelegate {
                     delegate?.viewTapped()
                 }
             } else {
-                ballBreakoutBehavior.push(item: ball)
+                ballBreakoutBehavior.push(item: ball, direction: CGPoint())
             }
         default:
             break
@@ -98,11 +102,13 @@ class BreakoutView: UIView, BreakoutBehaviourCollisionDelegate {
     func resetView() {
         for brick in babyBricks {
             brick.removeFromSuperview()
+            brickBreakoutBehavior.removeAllItems()
         }
         brickBreakoutBehavior.removeAllItems()
         babyBricks.removeAll()
         addBricks()
-        updateUI()
+        updateSubviews()
+        delegate?.resetView()
     }
     
     //MARK: - Properties
@@ -112,6 +118,8 @@ class BreakoutView: UIView, BreakoutBehaviourCollisionDelegate {
     private var paddle = UIView()
     
     private var ball = BallView()
+    
+    private var ballDirection = CGPoint()
     
     private lazy var ballBreakoutBehavior: BallBreakoutBehavior = {
         let breakoutBehavior = BallBreakoutBehavior()
@@ -159,21 +167,7 @@ class BreakoutView: UIView, BreakoutBehaviourCollisionDelegate {
     
     //MARK: - UI
     
-    func babyBrickOrigin(babyBrick: UIView)-> CGPoint {
-        let maxD = max(bounds.size.width, bounds.size.height)
-        let minD = min(bounds.size.width, bounds.size.height)
-        let widthVariable = maxD - minD
-        let y = babyBrick.frame.origin.y
-        if y > minD, y < maxD {
-            let x = bounds.size.width > minD ? babyBrick.frame.origin.x * (maxD/widthVariable) : babyBrick.frame.origin.x
-            return CGPoint(x: x, y: bounds.size.height - (maxD - (y+2)))
-        } else {
-            let x = bounds.size.width < maxD ? babyBrick.frame.origin.x * (widthVariable/maxD) : babyBrick.frame.origin.x
-            return CGPoint(x: x, y: bounds.size.height - (minD - (y+2)))
-        }
-    }
-    
-    func updateUI() {
+    func updateSubviews() {
         for (_, brick) in bricks {
             brick.frame = CGRect(origin: brickOrigin(column: brick.tag % bricksPerRow, row: (brick.tag / bricksPerRow) % numberOfBrickRows), size: brickSize)
             addBrickAsBarrier(brick: brick, to: ballBreakoutBehavior)
@@ -254,6 +248,20 @@ class BreakoutView: UIView, BreakoutBehaviourCollisionDelegate {
         let x = CGFloat(column)*(brickSize.width+CGFloat(brickSpacing))+CGFloat(brickSpacing)
         let y = CGFloat(row)*(brickSize.height+CGFloat(brickSpacing))
         return CGPoint(x: x, y: y)
+    }
+    
+    func babyBrickOrigin(babyBrick: UIView)-> CGPoint {
+        let maxD = max(bounds.size.width, bounds.size.height)
+        let minD = min(bounds.size.width, bounds.size.height)
+        let widthVariable = maxD - minD
+        let y = babyBrick.frame.origin.y
+        if y > minD, y < maxD {
+            let x = bounds.size.width > minD ? babyBrick.frame.origin.x * (maxD/widthVariable) : babyBrick.frame.origin.x
+            return CGPoint(x: x, y: bounds.size.height - (maxD - (y+2)))
+        } else {
+            let x = bounds.size.width < maxD ? babyBrick.frame.origin.x * (widthVariable/maxD) : babyBrick.frame.origin.x
+            return CGPoint(x: x, y: bounds.size.height - (minD - (y+2)))
+        }
     }
     
     private func addBricks() {
@@ -359,9 +367,7 @@ class BreakoutView: UIView, BreakoutBehaviourCollisionDelegate {
             babyBricks.append(b2)
                 
             brick.removeFromSuperview()
-            if delegate != nil {
-                delegate?.removedBrick(brick: brick)
-            }
+            delegate?.removedBrick(brick: brick)
             removeBrickAsBarrier(brick: brick, from: ballBreakoutBehavior)
             removeBrickAsBarrier(brick: brick, from: brickBreakoutBehavior)
             bricks["\(brick.tag)"] = nil
