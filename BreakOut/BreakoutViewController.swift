@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BreakOutView
 
 class BreakoutViewController: UIViewController, BreakoutViewDelegate, SettingsDelegate, UIViewControllerTransitioningDelegate {
     
