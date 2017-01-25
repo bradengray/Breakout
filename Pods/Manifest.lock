@@ -1,0 +1,22 @@
+PODS:
+  - BreakOutView (0.0.1)
+
+DEPENDENCIES:
+  - BreakOutView (from `https://github.com/bradengray/BreakOutView.git`, tag `0.0.1`)
+
+EXTERNAL SOURCES:
+  BreakOutView:
+    :git: https://github.com/bradengray/BreakOutView.git
+    :tag: 0.0.1
+
+CHECKOUT OPTIONS:
+  BreakOutView:
+    :git: https://github.com/bradengray/BreakOutView.git
+    :tag: 0.0.1
+
+SPEC CHECKSUMS:
+  BreakOutView: 4026b241dfff227ca52d628b33ed54349832fc03
+
+PODFILE CHECKSUM: 5cd4605eca7ff1b4941be9c3c82b4d4651231223
+
+COCOAPODS: 1.2.0.rc.1

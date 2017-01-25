@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29D0529E2329A4A5284270C31CFBE11E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		3FE5B93DD04145F63F2EDC2E084E7517 /* BreakOutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EDFD2E9D13C04FCE220105CF9A38E71 /* BreakOutView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49402CA87BD0019FA7D7AFDAB813117B /* Pods-BreakOut-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC574CDEA1DB6F0C9D791DEB02A72447 /* Pods-BreakOut-dummy.m */; };
+		56E220E2A956C921F9E60C1B3FE79A3A /* BreakoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC904516285BF9AC54DF30717CFAB5ED /* BreakoutView.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5F83D9FDA163F65B02DAC961B21D720B /* BallBreakoutBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB31D62E76C03DB201F0A408AB930F2 /* BallBreakoutBehavior.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		641BE147CBC3B9F7570E9FCDDCE5A4EA /* BallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE166EC475E068962061AB5B2A3C38B0 /* BallView.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6738071D031A76394C2EFB07A989E855 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		8B6878BAED57A51A355B38EEC36DF4AA /* BrickBreakoutBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69589817FD2792FA62934349DFEBFC7 /* BrickBreakoutBehavior.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8D2BB3A4B8050A24CB3B846D1EB56E26 /* BreakOutView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F958F0616B99423A8217515ACD7A7DF4 /* BreakOutView-dummy.m */; };
+		968F740BF5D818ECA46D447ED2750FFD /* BreakOutView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF4A6267031660B9A4670FF1CFF18371 /* BreakOutView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFC63BFA41C38F4877112E2AF654DA96 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DC7034ADADFAE493183A9960FE5462 /* UIKitExtensions.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D5CBAA22E3F0C217AFB2936279BD595D /* Brick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EF9BF6AC4E6F18B6EA84DAC7C3D2 /* Brick.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E440D4777E60D8841CB926A9A204B47E /* Pods-BreakOut-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F73C9D1D657B22F8D6251F38A51978B9 /* Pods-BreakOut-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECDDAA8B228D16C4290B097265275E51 /* NamedBezierPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9015A6F480630D6B065EDDB8B15DF37 /* NamedBezierPaths.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F0AD04AFDD5749840E75D9597C4DC5A2 /* BreakoutBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A75BC8F9493F00DAD406038FCB005 /* BreakoutBehavior.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AAD229715398A0A4F52AF263027C0B51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC59E95E0261114132D27C250F602888;
+			remoteInfo = BreakOutView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08AFF4D504B2D75AECCECB6EEA29C29B /* BreakOutView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BreakOutView-prefix.pch"; sourceTree = "<group>"; };
+		103273062BD04BA776589AAF3C7F5223 /* Pods-BreakOut-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BreakOut-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2EDFD2E9D13C04FCE220105CF9A38E71 /* BreakOutView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BreakOutView.h; path = BreakOutView/BreakOutView.h; sourceTree = "<group>"; };
+		38DC7034ADADFAE493183A9960FE5462 /* UIKitExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIKitExtensions.swift; path = BreakOutView/UIKitExtensions.swift; sourceTree = "<group>"; };
+		3A913BE8F9C522A0F029EA07A7F8467A /* Pods-BreakOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BreakOut.release.xcconfig"; sourceTree = "<group>"; };
+		57A8FB40CB3CAE8245C2C6F708412180 /* Pods-BreakOut.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BreakOut.modulemap"; sourceTree = "<group>"; };
+		7D62CDE0297EAF8EC34F559293B9D18B /* Pods_BreakOut.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BreakOut.framework; path = "Pods-BreakOut.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E1A75BC8F9493F00DAD406038FCB005 /* BreakoutBehavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BreakoutBehavior.swift; path = BreakOutView/BreakoutBehavior.swift; sourceTree = "<group>"; };
+		8C31EF9BF6AC4E6F18B6EA84DAC7C3D2 /* Brick.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Brick.swift; path = BreakOutView/Brick.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ADB82E250D5A438BA1ABFBC1E07B14A3 /* Pods-BreakOut-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BreakOut-acknowledgements.plist"; sourceTree = "<group>"; };
+		AE166EC475E068962061AB5B2A3C38B0 /* BallView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BallView.swift; path = BreakOutView/BallView.swift; sourceTree = "<group>"; };
+		AF0BC6C6F12177B42C8384FDE1D0CCF5 /* Pods-BreakOut-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BreakOut-frameworks.sh"; sourceTree = "<group>"; };
+		AF5359C286DD92FEBFBEC9EBAFBB0B11 /* BreakOutView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BreakOutView.modulemap; sourceTree = "<group>"; };
+		B9015A6F480630D6B065EDDB8B15DF37 /* NamedBezierPaths.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NamedBezierPaths.swift; path = BreakOutView/NamedBezierPaths.swift; sourceTree = "<group>"; };
+		BA9EACBA5651C033FA333EC7A13AA0FF /* BreakOutView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BreakOutView.framework; path = BreakOutView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC574CDEA1DB6F0C9D791DEB02A72447 /* Pods-BreakOut-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BreakOut-dummy.m"; sourceTree = "<group>"; };
+		BC904516285BF9AC54DF30717CFAB5ED /* BreakoutView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BreakoutView.swift; path = BreakOutView/BreakoutView.swift; sourceTree = "<group>"; };
+		BF4A6267031660B9A4670FF1CFF18371 /* BreakOutView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BreakOutView-umbrella.h"; sourceTree = "<group>"; };
+		C283AEBE4481FD79B9F8BB715A8A8B8C /* Pods-BreakOut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BreakOut.debug.xcconfig"; sourceTree = "<group>"; };
+		C5175985FA6166842E6B67A545A58A69 /* BreakOutView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BreakOutView.xcconfig; sourceTree = "<group>"; };
+		C69589817FD2792FA62934349DFEBFC7 /* BrickBreakoutBehavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BrickBreakoutBehavior.swift; path = BreakOutView/BrickBreakoutBehavior.swift; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DE0559C9CC83E7EBABAF80C77A930E5B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE827D3AC34B9318FE9C391714A23EA1 /* Pods-BreakOut-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BreakOut-resources.sh"; sourceTree = "<group>"; };
+		E3F8F5FB3F5D07D6A5F07E1C3F6D2DD4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB31D62E76C03DB201F0A408AB930F2 /* BallBreakoutBehavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BallBreakoutBehavior.swift; path = BreakOutView/BallBreakoutBehavior.swift; sourceTree = "<group>"; };
+		F73C9D1D657B22F8D6251F38A51978B9 /* Pods-BreakOut-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BreakOut-umbrella.h"; sourceTree = "<group>"; };
+		F958F0616B99423A8217515ACD7A7DF4 /* BreakOutView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BreakOutView-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39884635D9E4FFD8C327455E221DC7BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29D0529E2329A4A5284270C31CFBE11E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62E10D59BF8D6F623C9A098664DBE2BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6738071D031A76394C2EFB07A989E855 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FE059518F473C76C37D8377566D4B1D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF5359C286DD92FEBFBEC9EBAFBB0B11 /* BreakOutView.modulemap */,
+				C5175985FA6166842E6B67A545A58A69 /* BreakOutView.xcconfig */,
+				F958F0616B99423A8217515ACD7A7DF4 /* BreakOutView-dummy.m */,
+				08AFF4D504B2D75AECCECB6EEA29C29B /* BreakOutView-prefix.pch */,
+				BF4A6267031660B9A4670FF1CFF18371 /* BreakOutView-umbrella.h */,
+				E3F8F5FB3F5D07D6A5F07E1C3F6D2DD4 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BreakOutView";
+			sourceTree = "<group>";
+		};
+		55F3F4EBB84FAEBE917CC705A7C074D6 /* BreakOutView */ = {
+			isa = PBXGroup;
+			children = (
+				EBB31D62E76C03DB201F0A408AB930F2 /* BallBreakoutBehavior.swift */,
+				AE166EC475E068962061AB5B2A3C38B0 /* BallView.swift */,
+				7E1A75BC8F9493F00DAD406038FCB005 /* BreakoutBehavior.swift */,
+				2EDFD2E9D13C04FCE220105CF9A38E71 /* BreakOutView.h */,
+				BC904516285BF9AC54DF30717CFAB5ED /* BreakoutView.swift */,
+				8C31EF9BF6AC4E6F18B6EA84DAC7C3D2 /* Brick.swift */,
+				C69589817FD2792FA62934349DFEBFC7 /* BrickBreakoutBehavior.swift */,
+				B9015A6F480630D6B065EDDB8B15DF37 /* NamedBezierPaths.swift */,
+				38DC7034ADADFAE493183A9960FE5462 /* UIKitExtensions.swift */,
+				0FE059518F473C76C37D8377566D4B1D /* Support Files */,
+			);
+			name = BreakOutView;
+			path = BreakOutView;
+			sourceTree = "<group>";
+		};
+		6D11D74CD18B4BB5A30CBE468D355962 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55F3F4EBB84FAEBE917CC705A7C074D6 /* BreakOutView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6D462788B3FD01A86C28F9A28753BBB7 /* Pods-BreakOut */ = {
+			isa = PBXGroup;
+			children = (
+				DE0559C9CC83E7EBABAF80C77A930E5B /* Info.plist */,
+				57A8FB40CB3CAE8245C2C6F708412180 /* Pods-BreakOut.modulemap */,
+				103273062BD04BA776589AAF3C7F5223 /* Pods-BreakOut-acknowledgements.markdown */,
+				ADB82E250D5A438BA1ABFBC1E07B14A3 /* Pods-BreakOut-acknowledgements.plist */,
+				BC574CDEA1DB6F0C9D791DEB02A72447 /* Pods-BreakOut-dummy.m */,
+				AF0BC6C6F12177B42C8384FDE1D0CCF5 /* Pods-BreakOut-frameworks.sh */,
+				DE827D3AC34B9318FE9C391714A23EA1 /* Pods-BreakOut-resources.sh */,
+				F73C9D1D657B22F8D6251F38A51978B9 /* Pods-BreakOut-umbrella.h */,
+				C283AEBE4481FD79B9F8BB715A8A8B8C /* Pods-BreakOut.debug.xcconfig */,
+				3A913BE8F9C522A0F029EA07A7F8467A /* Pods-BreakOut.release.xcconfig */,
+			);
+			name = "Pods-BreakOut";
+			path = "Target Support Files/Pods-BreakOut";
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				6D11D74CD18B4BB5A30CBE468D355962 /* Pods */,
+				BA937EB90D69D09F29B7DDA1B028D5B9 /* Products */,
+				81052D39A56382EA339E73851F98F3BC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		81052D39A56382EA339E73851F98F3BC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D462788B3FD01A86C28F9A28753BBB7 /* Pods-BreakOut */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BA937EB90D69D09F29B7DDA1B028D5B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA9EACBA5651C033FA333EC7A13AA0FF /* BreakOutView.framework */,
+				7D62CDE0297EAF8EC34F559293B9D18B /* Pods_BreakOut.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9D04B30F73595159E20B1EB55EDD7D37 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				968F740BF5D818ECA46D447ED2750FFD /* BreakOutView-umbrella.h in Headers */,
+				3FE5B93DD04145F63F2EDC2E084E7517 /* BreakOutView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D999BC0DF48C2E1B3C9F98ABE6FE7571 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E440D4777E60D8841CB926A9A204B47E /* Pods-BreakOut-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E7D48BFE13701D0B3B3BE967B298936B /* Pods-BreakOut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11584260C9376168C6C0AA862DFCD3E6 /* Build configuration list for PBXNativeTarget "Pods-BreakOut" */;
+			buildPhases = (
+				177F5250BDF2875FDA35F3CAC1AB42A9 /* Sources */,
+				62E10D59BF8D6F623C9A098664DBE2BA /* Frameworks */,
+				D999BC0DF48C2E1B3C9F98ABE6FE7571 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				006999F0296769A791574CC2F04E7256 /* PBXTargetDependency */,
+			);
+			name = "Pods-BreakOut";
+			productName = "Pods-BreakOut";
+			productReference = 7D62CDE0297EAF8EC34F559293B9D18B /* Pods_BreakOut.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FC59E95E0261114132D27C250F602888 /* BreakOutView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 748EBD844648B566816E5B37D27C57B8 /* Build configuration list for PBXNativeTarget "BreakOutView" */;
+			buildPhases = (
+				0C0E4A58B9CB441C2D46B0F00A8CC18A /* Sources */,
+				39884635D9E4FFD8C327455E221DC7BE /* Frameworks */,
+				9D04B30F73595159E20B1EB55EDD7D37 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BreakOutView;
+			productName = BreakOutView;
+			productReference = BA9EACBA5651C033FA333EC7A13AA0FF /* BreakOutView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = BA937EB90D69D09F29B7DDA1B028D5B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC59E95E0261114132D27C250F602888 /* BreakOutView */,
+				E7D48BFE13701D0B3B3BE967B298936B /* Pods-BreakOut */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C0E4A58B9CB441C2D46B0F00A8CC18A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F83D9FDA163F65B02DAC961B21D720B /* BallBreakoutBehavior.swift in Sources */,
+				641BE147CBC3B9F7570E9FCDDCE5A4EA /* BallView.swift in Sources */,
+				F0AD04AFDD5749840E75D9597C4DC5A2 /* BreakoutBehavior.swift in Sources */,
+				8D2BB3A4B8050A24CB3B846D1EB56E26 /* BreakOutView-dummy.m in Sources */,
+				56E220E2A956C921F9E60C1B3FE79A3A /* BreakoutView.swift in Sources */,
+				D5CBAA22E3F0C217AFB2936279BD595D /* Brick.swift in Sources */,
+				8B6878BAED57A51A355B38EEC36DF4AA /* BrickBreakoutBehavior.swift in Sources */,
+				ECDDAA8B228D16C4290B097265275E51 /* NamedBezierPaths.swift in Sources */,
+				CFC63BFA41C38F4877112E2AF654DA96 /* UIKitExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		177F5250BDF2875FDA35F3CAC1AB42A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49402CA87BD0019FA7D7AFDAB813117B /* Pods-BreakOut-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		006999F0296769A791574CC2F04E7256 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BreakOutView;
+			target = FC59E95E0261114132D27C250F602888 /* BreakOutView */;
+			targetProxy = AAD229715398A0A4F52AF263027C0B51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0ADF0B936CB3B99504985CFBA2D482EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C283AEBE4481FD79B9F8BB715A8A8B8C /* Pods-BreakOut.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BreakOut/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BreakOut/Pods-BreakOut.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BreakOut;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		41B60F4FC441F5E4E2989498B1972694 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5175985FA6166842E6B67A545A58A69 /* BreakOutView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BreakOutView/BreakOutView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BreakOutView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BreakOutView/BreakOutView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BreakOutView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4A1D02C914F56013C722B91C60737709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5175985FA6166842E6B67A545A58A69 /* BreakOutView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BreakOutView/BreakOutView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BreakOutView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BreakOutView/BreakOutView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BreakOutView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B7045199700BEA8F96CCD251D30B117D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A913BE8F9C522A0F029EA07A7F8467A /* Pods-BreakOut.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BreakOut/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BreakOut/Pods-BreakOut.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BreakOut;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E72E7977875C2D251FC62736BBDDC389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11584260C9376168C6C0AA862DFCD3E6 /* Build configuration list for PBXNativeTarget "Pods-BreakOut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ADF0B936CB3B99504985CFBA2D482EC /* Debug */,
+				B7045199700BEA8F96CCD251D30B117D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12914D756594D15C6F2CA12FE5F89F1B /* Debug */,
+				E72E7977875C2D251FC62736BBDDC389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		748EBD844648B566816E5B37D27C57B8 /* Build configuration list for PBXNativeTarget "BreakOutView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A1D02C914F56013C722B91C60737709 /* Debug */,
+				41B60F4FC441F5E4E2989498B1972694 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

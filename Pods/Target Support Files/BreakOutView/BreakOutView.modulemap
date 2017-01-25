@@ -1,0 +1,6 @@
+framework module BreakOutView {
+  umbrella header "BreakOutView-umbrella.h"
+
+  export *
+  module * { export * }
+}
